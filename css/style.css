@@ -5,8 +5,9 @@
 }
 
 body {
-   font-family: arial;
+   font-family: 'Raleway', sans-serif;
    color: #fff;
+   font-weight: 500;
 }
 
 body > #general_wrapper {
@@ -15,9 +16,26 @@ body > #general_wrapper {
 }
 
 /* UTILITIES */
-.container_prova {
-   font-size: 50px;
-   line-height: 100px;
+h1,h2,h3,h4,h5,h6 {
+   font-weight: 700;
+   color: #fff;
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
+}
+
+ul {
+   list-style: none;
+   padding: 0;
+}
+
+.navigation li > a:hover,
+.playlist > .new_playlist:hover,
+.playlist > .personal_playlist a:hover,
+#sidebar_footer > .installer:hover {
+   animation: hover_on_links 0.3s forwards;
 }
 /* /UTILITIES */
 
@@ -28,18 +46,146 @@ main {
    display: flex;
 }
 
+/* sidebar */
 main > #sidebar {
+   max-height: 100%;
    z-index: 3;
    width: 200px;
    background: #000;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
 }
+
+#sidebar > #sidebar_header {
+   height: 60px;
+   padding: 10px;
+}
+ #sidebar_header img {
+    max-width: 75%;
+}
+
+#sidebar > #sidebar_main {
+   font-size: 12px;
+   padding: 10px 10px 0 0;
+   font-weight: 600;
+   color: #A3A3A3;
+}
+
+#sidebar_main .navigation ul li {
+   height: 30px;
+   line-height: 30px;
+}
+
+#sidebar_main .navigation ul li.selected {
+   position: relative;
+   color: #fff;
+}
+#sidebar_main .navigation ul li.selected::before {
+   content: "";
+   height: 100%;
+   position: absolute;
+   left: 0;
+   border: 1px solid #ADFF2F;
+}
+
+.navigation ul li > a {
+   display: inline-block;
+   margin-left: 15px;
+}
+
+.navigation li > a::before {
+   content: "\f002";
+   font-family: "FontAwesome";
+   font-size: 18px;
+   vertical-align: middle;
+   padding-right: 10px;
+}
+.navigation li:first-child > a::before {
+   content: "\f015";
+}
+.navigation li:last-child > a::before {
+   content: "\f02d";
+}
+
+#sidebar_main > .playlist {
+   padding: 10px 15px;
+}
+
+.playlist > h5 {
+   font-size: 15px;
+}
+
+.playlist > .new_playlist::before {
+   content: "+";
+   display: inline-block;
+   width: 30px;
+   height: 30px;
+   line-height: 30px;
+   font-size: 30px;
+   vertical-align: middle;
+   margin: 10px 10px 10px 0;
+   text-align: center;
+   background: #A3A3A3;
+   color: #000;
+}
+.playlist > .new_playlist:hover::before {
+   animation: backgound_white 0.3s forwards;
+}
+
+.playlist > .personal_playlist {
+   height: 180px;
+   padding: 10px 0;
+   overflow-y: auto;
+}
+
+.playlist > .personal_playlist li {
+   padding-bottom: 15px;
+}
+
+#sidebar > #sidebar_footer {
+   padding: 10px 15px;
+   line-height: 25px;
+}
+
+#sidebar_footer > .installer {
+   display: block;
+   font-size: 12px;
+   color: #a8a8a8;
+   padding-bottom: 6px;
+   margin-bottom: 6px;
+   border-bottom: 1px solid #a8a8a8;
+}
+#sidebar_footer > .installer::before {
+   content: "\f358";
+   font-family: "FontAwesome";
+   margin-right: 3px;
+}
+
+#sidebar_footer h4.profile_name::before {
+   content: "";
+   display: inline-block;
+   width: 30px;
+   height: 30px;
+   vertical-align: middle;
+   margin-right: 6px;
+   border-radius: 50%;
+   background: url("../img/icons/user-icon.png");
+   background-size: contain;
+   background-repeat: no-repeat;
+}
+
+/* /sidebar */
+
 
 main > #content {
    z-index: 1;
    width: calc(100% - 200px);
    background: #141922;
    padding: 80px 25px;
-   overflow: auto;
+   overflow-y: auto;
+   position: relative;
 }
 
 #content > #upgrade {
@@ -57,9 +203,6 @@ main > #content {
 
 /* FOOTER */
 footer#console {
-   position: fixed;
-   left: 0;
-   bottom: 0;
    z-index: 4;
    width: 100%;
    height: 90px;
@@ -72,4 +215,21 @@ footer#console {
 /* /MEDIA QUERIES */
 
 /* KEYFRAMES */
+@keyframes hover_on_links {
+   0% {
+      color: #a8a8a8;
+   }
+   100% {
+      color: #fff;
+   }
+}
+
+@keyframes backgound_white {
+   0% {
+      background: #A3A3A3;
+   }
+   100% {
+      background: #fff;
+   }
+}
 /* /KEYFRAMES */

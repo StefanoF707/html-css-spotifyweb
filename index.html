@@ -3,10 +3,12 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <!-- font-awesome -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+      <!-- font-family raleway -->
+      <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
       <!-- my css -->
       <link rel="stylesheet" href="css/style.css">
+      <!-- font awesome -->
+      <script src="https://kit.fontawesome.com/b954c4656e.js" crossorigin="anonymous"></script>
       <title>Spotify WebApp</title>
    </head>
    <body>
@@ -20,19 +22,56 @@
             <aside id="sidebar">
                <!-- logo -->
                <div id="sidebar_header">
-
+                  <a href="#">
+                     <img src="img/logo-spotify.png" alt="logo Spotify">
+                  </a>
                </div>
                <!-- /logo -->
 
                <!-- menu di navigazione & playlists -->
                <div id="sidebar_main">
+                  <nav class="navigation">
+                     <ul>
+                        <li class="selected">
+                           <a href="#">Home</a>
+                        </li>
+                        <li>
+                           <a href="#">Cerca</a>
+                        </li>
+                        <li>
+                           <a href="#">La tua libreria</a>
+                        </li>
+                     </ul>
+                  </nav>
 
+                  <div class="playlist">
+                     <h5>PLAYLIST</h5>
+                     <a href="#" class="new_playlist">Crea playlist</a>
+                     <ul class="personal_playlist">
+                        <li>
+                           <a href="#">Nome playlist</a>
+                        </li>
+                        <li>
+                           <a href="#">Nome playlist</a>
+                        </li>
+                        <li>
+                           <a href="#">Nome playlist</a>
+                        </li>
+                        <li>
+                           <a href="#">Nome playlist</a>
+                        </li>
+                        <li>
+                           <a href="#">Nome playlist</a>
+                        </li>
+                     </ul>
+                  </div>
                </div>
                <!-- /menu di navigazione & playlists -->
 
                <!-- profilo utente -->
                <div id="sidebar_footer">
-
+                  <a href="#" class="installer">Installa app</a>
+                  <h4 class="profile_name">John Doe</h4>
                </div>
                <!-- /profilo utente -->
             </aside>
@@ -45,9 +84,6 @@
                   dnwdnwidwni
                </div>
 
-               <div class="container_prova">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veni
-               </div>
             </section>
             <!-- /content -->
 
