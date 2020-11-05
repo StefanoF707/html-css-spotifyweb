@@ -31,10 +31,15 @@ ul {
    padding: 0;
 }
 
+.selected {
+   color: #fff;
+}
+
 .nav_menu li > a:hover,
 .btn_new_playlist:hover,
 #playlists a:hover,
-.app_installer:hover {
+.app_installer:hover,
+.content_navbar li > a:hover {
    animation: hover_on_links 0.3s forwards;
 }
 
@@ -91,7 +96,6 @@ ul.nav_menu > li {
 
 .nav_menu li.selected {
    position: relative;
-   color: #fff;
 }
 .nav_menu li.selected::before {
    content: "";
@@ -211,6 +215,26 @@ main > #content {
    animation: btn_scale 0.3s forwards;
 }
 
+#content > .content_navbar > ul {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   color: #a8a8a8;
+}
+#content > .content_navbar > ul li {
+   margin: 10px 15px;
+   text-transform: uppercase;
+   font-size: 13px;
+   font-weight: 600;
+}
+
+.content_navbar li.selected::after {
+   content: "";
+   display: block;
+   width: 30px;
+   margin: 3px auto;
+   border-bottom: 2px solid #ADFF2F;
+}
 /* /content */
 
 /* /MAIN */
