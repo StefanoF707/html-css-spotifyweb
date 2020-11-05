@@ -37,6 +37,7 @@ ul {
 .app_installer:hover {
    animation: hover_on_links 0.3s forwards;
 }
+
 /* /UTILITIES */
 
 /* MAIN */
@@ -75,6 +76,10 @@ main > #sidebar {
    max-width: 70%;
 }
 
+#sidebar_top > .logo_container > i {
+   display: none;
+}
+
 #sidebar_top ul.nav_menu {
    padding: 5px 0;
 }
@@ -101,18 +106,13 @@ ul.nav_menu > li {
    margin-left: 15px;
 }
 
-.nav_menu li > a::before {
-   content: "\f002";
-   font-family: "FontAwesome";
-   font-size: 18px;
+.nav_menu li > a > i.fas {
+   display: inline-block;
+   width: 30px;
+   text-align: center;
+   font-size: 20px;
    vertical-align: middle;
    padding-right: 10px;
-}
-.nav_menu li:first-child > a::before {
-   content: "\f015";
-}
-.nav_menu li:last-child > a::before {
-   content: "\f02d";
 }
 
 #sidebar_top > .playlist_container {
@@ -160,14 +160,8 @@ ul.nav_menu > li {
 }
 
 #sidebar_bottom > .app_installer {
-   display: block;
    padding-bottom: 5px;
    border-bottom: 1px solid #a8a8a8;
-}
-#sidebar_bottom > .app_installer::before {
-   content: "\f358";
-   font-family: "fontawesome";
-   margin-right: 4px;
 }
 
 #sidebar_bottom .user_container {
@@ -216,6 +210,83 @@ footer#console {
 
 
 /* MEDIA QUERIES */
+@media screen and (max-width: 552px) {
+
+   .hidden_xs {
+      display: none;
+   }
+
+   main > #sidebar {
+      width: 50px;
+   }
+
+   /* sidebar top */
+   #sidebar > #sidebar_top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   #sidebar_top > .logo_container {
+      color: #fff;
+      padding: 0;
+   }
+   #sidebar_top > .logo_container > i {
+      display: inline-block;
+      font-size: 30px;
+   }
+
+   #sidebar_top  .nav_menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 120px;
+   }
+
+   .nav_menu li > a {
+      margin-left: 0;
+      display: inline-block;
+   }
+   .nav_menu li > a > i.fas {
+      padding: 0;
+      font-size: 25px;
+   }
+   .nav_menu li.selected::before {
+      border: 0;
+   }
+   /* /sidebar top */
+
+   /* sidebar bottom */
+   #sidebar > #sidebar_bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 5px 0;
+   }
+   #sidebar_bottom > .app_installer {
+      border-bottom: 0;
+   }
+
+   #sidebar_bottom .user_container > img {
+      margin-right: 0;
+   }
+   /* /sidebar bottom */
+
+
+   /* content */
+   main > #content {
+      width: calc(100% - 50px);
+   }
+
+   #content > #cta {
+      width: calc(100% - 50px);
+      margin-left: 50px;
+   }
+   /* /content */
+
+
+
+}
 /* /MEDIA QUERIES */
 
 /* KEYFRAMES */

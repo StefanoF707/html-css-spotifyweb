@@ -26,20 +26,36 @@
 
                   <!-- logo -->
                   <div class="logo_container">
-                     <img src="img/logo-spotify.png" alt="logo Spotify">
+                     <img src="img/logo-spotify.png" alt="logo Spotify" class="hidden_xs">
+                     <i class="fab fa-spotify"></i>
                   </div>
                   <!-- /logo -->
 
                   <nav>
                      <ul class="nav_menu">
-                        <li class="selected"><a href="">Home</a></li>
-                        <li><a href="">Cerca</a></li>
-                        <li><a href="">La tua libreria</a></li>
+                        <li class="selected">
+                           <a href="#">
+                              <i class="fas fa-home"></i>
+                              <span class="hidden_xs">Home</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                              <i class="fas fa-search"></i>
+                              <span class="hidden_xs">Cerca</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                              <i class="fas fa-book"></i>
+                              <span class="hidden_xs">La tua libreria</span>
+                           </a>
+                        </li>
                      </ul>
 
                   </nav>
 
-                  <div class="playlist_container">
+                  <div class="playlist_container hidden_xs">
                      <h4>playlist</h4>
                      <a href="#" class="btn_new_playlist">Crea playlist</a>
                      <ul id="playlists">
@@ -57,10 +73,13 @@
 
                <!-- profilo utente -->
                <div id="sidebar_bottom">
-                  <a href="#" class="app_installer">Installa app</a>
+                  <div class="app_installer">
+                     <i class="far fa-arrow-alt-circle-down"></i>
+                     <a href="#" class="app_installer hidden_xs">Installa app</a>
+                  </div>
                   <div class="user_container">
                      <img src="img/icons/user-icon.png" alt="">
-                     <h3>John Doe</h3>
+                     <h3 class="hidden_xs">John Doe</h3>
                   </div>
                </div>
                <!-- /profilo utente -->
