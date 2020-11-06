@@ -396,7 +396,6 @@ footer#console {
 #console > .console_center {
    width: 45%;
    height: 100%;
-      border: 1px solid blue;
 }
 
 .console_center > .player {
@@ -417,9 +416,48 @@ footer#console {
    animation: scale_play_btn 0.3s forwards;
 }
 
-.console_center > .timeline{
+.console_center > .timeline {
+   display: flex;
+   justify-content: center;
+   align-items: center;
    height: 50%;
-      border: 1px solid #000;
+}
+
+.console_center > .timeline > span {
+   font-size: 12px;
+}
+
+.console_center > .timeline > .timeline_bar {
+   width: 80%;
+   height: 5px;
+   margin: 0 10px;
+   border-radius: 5px;
+   background: #5A5A5A;
+   cursor: pointer;
+}
+.timeline > .timeline_bar > .filling_bar {
+   height: 100%;
+   width: 68%;
+   background: #fff;
+   border-radius: 5px;
+   position: relative;
+}
+.timeline .filling_bar .slider_timeline {
+   width: 13px;
+   height: 13px;
+   border-radius: 50%;
+   background: #fff;
+   position: absolute;
+   top: 50%;
+   right: -6px;
+   transform: translateY(-50%);
+   display: none;
+}
+.timeline > .timeline_bar:hover > .filling_bar {
+   background: #ADFF2F;
+}
+.timeline > .timeline_bar:hover > .filling_bar > .slider_timeline {
+   display: block;
 }
 /* /FOOTER CENTER */
 
@@ -453,6 +491,7 @@ footer#console {
    height: 100%;
    width: 70%;
    background: #fff;
+   border-radius: 3px;
    position: relative;
 }
 .control_volume .filling_bar .slider_volume {
