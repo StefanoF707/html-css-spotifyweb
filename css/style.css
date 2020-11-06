@@ -62,7 +62,8 @@ ul {
 #playlists a:hover,
 .app_installer:hover,
 .content_navbar li > a:hover,
-.add_buttons > a:hover {
+.add_buttons > a:hover,
+.console_right_buttons > a:hover i {
    animation: hover_on_links 0.3s forwards;
 }
 
@@ -354,7 +355,6 @@ footer#console {
 #console > .console_right {
    width: 200px;
    height: 100%;
-   padding: 0 5px;
       border: 1px solid yellow;
 }
 #console > .console_center {
@@ -368,6 +368,7 @@ footer#console {
    display: flex;
    align-items: center;
    justify-content: space-between;
+   padding: 0 5px;
 }
 
 #console > .console_left > .playback {
@@ -398,6 +399,62 @@ footer#console {
    margin-left: 5px;
 }
 /* /LEFT */
+
+/* CENTER */
+/* /CENTER */
+
+/* RIGHT */
+#console > .console_right {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 8px;
+   font-size: 14px;
+}
+
+.console_right > .console_right_buttons a {
+   margin-right: 5px;
+}
+
+.console_right > .control_volume {
+   width: 70%;
+   display: flex;
+   align-items: center
+}
+.console_right > .control_volume > .volume_bar {
+   width: 80%;
+   margin: 0 7px;
+   height: 4px;
+   border-radius: 3px;
+   background: #5A5A5A;
+   cursor: pointer;
+}
+.control_volume > .volume_bar > .filling_bar {
+   height: 100%;
+   width: 70%;
+   background: #fff;
+   position: relative;
+}
+.control_volume .filling_bar .slider_volume {
+   width: 12px;
+   height: 12px;
+   border-radius: 50%;
+   background: #fff;
+   position: absolute;
+   top: 50%;
+   right: -6px;
+   transform: translateY(-50%);
+   display: none;
+}
+.control_volume > .volume_bar:hover > .filling_bar {
+   background-color: #ADFF2F;
+}
+.control_volume > .volume_bar:hover .slider_volume {
+   display: block;
+}
+/* /RIGHT */
+
+
 /* /FOOTER */
 
 
@@ -486,6 +543,15 @@ footer#console {
       flex-direction: column;
       align-items: flex-start;
       justify-content: space-around;
+   }
+
+   #console > .console_right {
+      flex-direction: column-reverse;
+      justify-content: space-around;
+      align-items: flex-end;
+   }
+   .console_right > .control_volume {
+      width: 100%;
    }
 }
 /* /DISPOSITIVI SM */
