@@ -41,6 +41,11 @@ ul {
 
 .section_title {
    font-size: 25px;
+   margin-bottom: 10px;
+}
+.section_subtitle {
+   font-size: 14px;
+   color: #a8a8a8;
 }
 
 .item_title {
@@ -201,11 +206,12 @@ ul.nav_menu > li {
 main > #content {
    width: calc(100% - 200px);
    background: #141922;
-   padding: 80px 25px;
+   padding: 80px 25px 20px;
    overflow-y: auto;
    z-index: 1;
 }
 
+/* CTA */
 #content > #cta {
    display: flex;
    align-items: center;
@@ -232,7 +238,9 @@ main > #content {
 #cta > .btn_upgrade:hover {
    animation: btn_scale 0.3s forwards;
 }
+/* CTA */
 
+/* NAVBAR */
 #content > .content_navbar > ul {
    display: flex;
    justify-content: center;
@@ -253,49 +261,55 @@ main > #content {
    margin: 3px auto;
    border-bottom: 2px solid #ADFF2F;
 }
+/* /NAVBAR */
 
-/* SEZIONE recent */
-#content > #recent {
-   padding: 25px 0;
+/* SEZIONI */
+#content > #recent,
+#content > #created,
+#content > #popular {
+   padding-top : 25px;
 }
 
-#recent .recent_item_container {
+.item_container {
    display: flex;
    align-items: flex-start;
    flex-wrap: wrap;
 }
-#recent .recent_item_container > .recent_item {
-   width: calc(100% / 6 - 15px);
+.item_container > .item {
+   width: calc(100% / 6);
    min-width: 130px;
-   margin: 30px 15px 30px 0;
+   padding: 30px 15px 30px 0;
 }
-
-/* top */
-#recent .recent_item > .recent_item_top {
-   font-size: 0;
-   position: relative;
-}
-#recent .recent_item:hover {
+.item:hover {
    animation: scale_cards 0.3s forwards;
 }
 
-#recent .recent_item > .recent_item_top img {
+.item > .item_top {
+   font-size: 0;
+   position: relative;
+}
+#popular .item > .item_top {
+   border-radius: 50%;
+   overflow: hidden;
+}
+
+.item > .item_top img {
    width: 100%;
 }
 
-#recent .recent_item > .recent_item_top.multi_item {
+.item > .item_top.multi_item {
    display: flex;
    flex-wrap: wrap;
 }
 
-#recent .recent_item > .recent_item_top.multi_item .recent_multi_item {
+.item > .item_top.multi_item .multi_item {
    width: 50%;
 }
-#recent .recent_item > .recent_item_top.multi_item .recent_multi_item img {
+.item > .item_top.multi_item .multi_item img {
    width: 100%;
 }
 
-#recent .recent_item > .recent_item_top .layover {
+.item > .item_top .layover {
    width: 100%;
    height: 100%;
    position: absolute;
@@ -308,20 +322,18 @@ main > #content {
    align-items: center;
    opacity: 0;
 }
-#recent .recent_item:hover > .recent_item_top .layover {
+.item:hover > .item_top .layover {
    animation: opacity_layover 0.3s forwards;
 }
-/* /top */
 
-
-/* bottom */
-#recent .recent_item > .recent_item_bottom {
+.item > .item_bottom {
    text-align: center;
    padding: 10px;
 }
-/* /bottom */
-/* /SEZIONE recent */
-
+#created .item > .item_bottom {
+   text-align: left;
+}
+/* SEZIONI */
 
 /* /content */
 
@@ -342,6 +354,9 @@ footer#console {
 /* DISPOSITIVI MD */
 @media screen and (max-width: 1120px) {
 
+   .section_subtitle {
+      font-size: 13px;
+   }
    .item_title {
       font-size: 14px;
    }
@@ -349,9 +364,9 @@ footer#console {
       font-size: 11px;
    }
 
-   #recent .recent_item_container > .recent_item {
-      width: calc(100% / 4 - 15px);
-      margin: 20px 15px 10px 0;
+   .item_container > .item {
+      width: calc(100% / 4);
+      padding: 20px 15px 10px 0;
    }
 
 }
@@ -361,6 +376,7 @@ footer#console {
 @media screen and (max-width: 840px) {
 
    main > #sidebar {
+      width: 150px;
       font-size: 11px;
    }
    #sidebar > #sidebar_top {
@@ -392,6 +408,11 @@ footer#console {
 
    main > #content {
       padding: 60px 10px 30px;
+      width: calc(100% - 150px);
+   }
+   #content > #cta {
+      width: calc(100% - 150px);
+      margin-left: 150px;
    }
 
    #content > .content_navbar > ul li {
@@ -399,9 +420,9 @@ footer#console {
       font-size: 10px;
    }
 
-   #recent .recent_item_container > .recent_item {
-      width: calc(50% - 15px);
-      margin: 20px 15px 10px 0;
+   .item_container > .item {
+      width: 50%;
+      padding: 20px 15px 10px 0;
    }
 
 }
@@ -412,6 +433,9 @@ footer#console {
 
    .section_title {
       font-size: 20px;
+   }
+   .section_subtitle {
+      font-size: 11px;
    }
 
    .item_title {
@@ -497,16 +521,15 @@ footer#console {
       padding: 3px 7px;
    }
 
-   #recent .recent_item_container > .recent_item {
-      width: calc(50% - 10px);
+   .item_container > .item {
       min-width: 0;
-      margin: 20px 10px 10px 0;
+      padding: 20px 10px 10px 0;
    }
    /* /content */
 }
 /* /DISPOSITIVI XS */
-
 /* /MEDIA QUERIES */
+
 
 /* KEYFRAMES */
 @keyframes hover_on_links {
