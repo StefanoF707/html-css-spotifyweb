@@ -336,9 +336,7 @@ main > #content {
    text-align: left;
 }
 /* SEZIONI */
-
 /* /content */
-
 /* /MAIN */
 
 
@@ -355,15 +353,9 @@ footer#console {
 #console > .console_right {
    width: 200px;
    height: 100%;
-      border: 1px solid yellow;
-}
-#console > .console_center {
-   width: 45%;
-   height: 100%;
-      border: 1px solid blue;
 }
 
-/* LEFT */
+/* FOOTER LEFT */
 #console > .console_left {
    display: flex;
    align-items: center;
@@ -398,12 +390,40 @@ footer#console {
 .console_left > .add_buttons a {
    margin-left: 5px;
 }
-/* /LEFT */
+/* /FOOTER LEFT */
 
-/* CENTER */
-/* /CENTER */
+/* FOOTER CENTER */
+#console > .console_center {
+   width: 45%;
+   height: 100%;
+      border: 1px solid blue;
+}
 
-/* RIGHT */
+.console_center > .player {
+   height: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.console_center > .player .player_btn {
+   margin: 0 10px;
+   font-size: 16px;
+   cursor: pointer;
+}
+.console_center > .player .player_btn.player_play {
+   font-size: 25px;
+}
+.console_center > .player .player_btn.player_play:hover {
+   animation: scale_play_btn 0.3s forwards;
+}
+
+.console_center > .timeline{
+   height: 50%;
+      border: 1px solid #000;
+}
+/* /FOOTER CENTER */
+
+/* FOOTER RIGHT */
 #console > .console_right {
    display: flex;
    justify-content: space-between;
@@ -452,9 +472,7 @@ footer#console {
 .control_volume > .volume_bar:hover .slider_volume {
    display: block;
 }
-/* /RIGHT */
-
-
+/* /FOOTER RIGHT */
 /* /FOOTER */
 
 
@@ -702,6 +720,15 @@ footer#console {
    }
    100% {
       transform: scale(1.04);
+   }
+}
+
+@keyframes scale_play_btn {
+   0% {
+      transform: scale(1);
+   }
+   100% {
+      transform: scale(1.2);
    }
 }
 /* /KEYFRAMES */
