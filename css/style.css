@@ -512,6 +512,43 @@ footer#console {
 
 /* MEDIA QUERIES */
 
+/* SCHERMI GRANDI */
+@media screen and (min-width: 1600px) {
+
+   .section_title {
+      font-size: 32px;
+   }
+   .section_subtitle {
+      font-size: 19px;
+   }
+
+   .item_title {
+      font-size: 20px;
+   }
+   .item_subtitle {
+      font-size: 15px;
+   }
+
+   .console_left .playback_right > .playback_title {
+      font-size: 15px;
+   }
+   .console_left .playback_right > .playback_subtitle {
+      font-size: 13px;
+   }
+
+   .console_center > .player .player_btn {
+      font-size: 18px;
+   }
+   .console_center > .player .player_btn.player_play {
+      font-size: 28px;
+   }
+   .console_center > .timeline > span {
+      font-size: 14px;
+   }
+}
+/* /SCHERMI GRANDI */
+
+
 /* DISPOSITIVI MD */
 @media screen and (max-width: 1120px) {
 
@@ -529,7 +566,6 @@ footer#console {
       width: calc(100% / 4);
       padding: 20px 15px 10px 0;
    }
-
 }
 /* /DISPOSITIVI MD */
 
