@@ -299,15 +299,15 @@ main > #content {
    width: 100%;
 }
 
-.item > .item_top.multi_item {
+.item > .item_top.multi_item_container {
    display: flex;
    flex-wrap: wrap;
 }
 
-.item > .item_top.multi_item .multi_item {
+.item > .item_top.multi_item_container .multi_item {
    width: 50%;
 }
-.item > .item_top.multi_item .multi_item img {
+.item > .item_top.multi_item_container .multi_item img {
    width: 100%;
 }
 
